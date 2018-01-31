@@ -3,7 +3,6 @@ body {
   font-family: 'Quantico', sans-serif;
 }
 
-
 #background {
   color:white;
   background-color: black;
@@ -11,7 +10,7 @@ body {
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: 60%;
-  opacity: .8;
+  opacity: .9;
   z-index: -1;
 }
 
@@ -36,5 +35,8 @@ body {
   margin-top: 90px;
   height: 650px;
   width: 700px;
-  /* border: 1px solid white; */
+}
+
+#emailBreach-input {
+  width: 400px;
 }

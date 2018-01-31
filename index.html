@@ -13,77 +13,56 @@
 
   <div id='background'>
 
-
-<!-- APPEND BREACH INFO TO HERE -->
+    <!-- APPEND BREACH INFO TO HERE -->
     <div id="breachInfo" class="row"></div>
 
-
-
-
+    <!-- start page -->
     <div class="row">
       <div id="welcome-note" class="col-6 text-center">
         <h5>has your email been compromised?<BR>
-        has a similar password you may use been exposed?<br>
-      which websites have been previosly breached?</h5><BR>
+      which websites have been previosly breached?</h5>
+        <BR>
 
         <button id="enter-form" class='btn-lg' type='button'>find out</button>
-
-
       </div>
 
 
+      <!-- FORMS ------->
+      <div id="formList" class="row">
+        <div class='container'>
+          <form name="emailBreach">
+            <fieldset>
+              <div id="new-email-breach" class="form-group">
+                <label for="emailBreach-input">Enter Email:</label>
+                <p><small><i>e.g. johndoe@gmail.com</i></small></p>
+                <input name="newemail" type="text" class="form-control" id="emailBreach-input">
+              </div>
+              <button id="emailbutton" type="submit" class="btn btn-sm">Submit</button>
+            </fieldset>
+          </form>
+          <br><br>
+          <form name="websiteBreach">
+            <fieldset>
+              <div id="new-website-breach" class="form-group">
+                <label for="websiteBreach-input">Check Website:</label>
+                <p><small>*Type name of website only</small></p>
+                <input name="newwebsite" type="text" class="form-control" id="websiteBreach-input">
+              </div>
+              <button id="websitebutton" type="submit" class="btn btn-sm" value="Reset form">Submit</button>
+            </fieldset>
+          </form>
+          <BR>
+          <BR>
 
-<div id="formList" class="row">
-<div class='container'>
-        <form name="emailBreach">
-          <fieldset>
-            <div id="new-email-breach" class="form-group">
-              <label for="emailBreach-input">Enter Email:</label>
+          <button id='tips' class='btn-sm'>Why? How?</button>
 
-              <input name="newemail" type="text" class="form-control" id="emailBreach-input">
-            </div>
-            <button id="emailbutton" type="submit" class="btn btn-sm">Submit</button>
-          </fieldset>
-        </form>
-<br><br>
-       <form name="password">
-          <fieldset>
-            <div id="new-password" class="form-group">
-              <label for="password-input">Enter a Password:</label>
-              <!-- If it is, it makes them a greater risk of being used to take over other accounts. -->
-              <input name="newpassword" type="text" class="form-control" id="password-input">
-            </div>
-            <button id="passwordbutton" type="submit" class="btn btn-sm">Submit</button>
-          </fieldset>
-        </form>
-<BR><BR>
-
-        <form name="websiteBreach">
-          <fieldset>
-            <div id="new-website-breach" class="form-group">
-              <label for="websiteBreach-input">Check Website:</label>
-              <p><small>*Type name of website only</small></p>
-              <input name="newwebsite" type="text" class="form-control" id="websiteBreach-input">
-            </div>
-            <button id="websitebutton" type="submit" class="btn btn-sm">Submit</button>
-          </fieldset>
-        </form><BR><BR>
-
-        <button id='tips' class='btn-sm'>Why? How?</button>
-
-
-
+        </div>
 
       </div>
-
 
     </div>
 
-
   </div>
-
-
-</div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

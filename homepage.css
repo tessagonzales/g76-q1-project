@@ -46,13 +46,13 @@ a:hover {
 }
 
 .one, .two {
-  border: 1px solid white;
+  border: 1px outset white;
   height: 240px;
   width: 200px;
   margin: 5px;
+  border-radius: 25px
 }
 
-/* FIGURE THIS CRAP OUUUUUUUUUUT */
 .three {
   margin: 20px;
   margin-bottom: 20px;
@@ -61,8 +61,7 @@ a:hover {
 
 }
 
-
-.five {
+.four {
   padding-top: 70px;
   padding-left: 70px;
   text-align: center;
