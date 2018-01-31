@@ -1,0 +1,40 @@
+body {
+  background-color: black;
+  font-family: 'Quantico', sans-serif;
+}
+
+
+#background {
+  color:white;
+  background-color: black;
+  background-image: url('images/faceless-man-hoodie.jpg');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 60%;
+  opacity: .8;
+  z-index: -1;
+}
+
+.row {
+  height: 730px;
+  width: auto;
+  margin: 60px;
+}
+
+#welcome-note {
+  top: 30%;
+  position: absolute;
+}
+
+#tips {
+ float: left;
+ margin-right: 50px;
+}
+
+#breachInfo {
+  float: right;
+  margin-top: 90px;
+  height: 650px;
+  width: 700px;
+  /* border: 1px solid white; */
+}
