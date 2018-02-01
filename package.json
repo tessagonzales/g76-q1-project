@@ -1,0 +1,23 @@
+{
+  "name": "g76-q1-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "server": "json-server --watch db.json --port 3001",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tessagonzales/g76-q1-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tessagonzales/g76-q1-project/issues"
+  },
+  "homepage": "https://github.com/tessagonzales/g76-q1-project#readme",
+  "devDependencies": {
+    "json-server": "^0.12.1"
+  }
+}

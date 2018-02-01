@@ -80,3 +80,11 @@ a:hover {
    text-align: center;
    opacity: .2;
  }
+
+
+/* DASH PAGE */
+#your-emails {
+  border: 1px solid white;
+  height: 200px;
+  width: auto;
+}

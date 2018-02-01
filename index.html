@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Quantico" rel="stylesheet">
-  <title>WELCOME</title>
+  <title>Know ya Breaches</title>
 </head>
 
 <body>
@@ -15,6 +15,21 @@
 
     <!-- APPEND BREACH INFO TO HERE -->
     <div id="breachInfo" class="row"></div>
+
+
+    <!-- USERNAME LOGIN -->
+    <form name="userLoginForm">
+    <div id="login-form">
+      <p style='font-size:25px'>OR log in:</p><BR>
+      <label for="username">Username</label>
+      <input name='newlogin' type="text" id="username" placeholder="Username"><BR><BR>
+
+      <label for="password">Password</label>
+      <input name='newpassword' type="password" id="password" placeholder="Password"><BR><BR>
+    <input type="submit" id="submit" value="Login">
+  </form>
+</div>
+
 
     <!-- start page -->
     <div class="row">
@@ -34,8 +49,7 @@
             <fieldset>
               <div id="new-email-breach" class="form-group">
                 <label for="emailBreach-input">Enter Email:</label>
-                <p><small><i>e.g. johndoe@gmail.com</i></small></p>
-                <input name="newemail" type="text" class="form-control" id="emailBreach-input">
+                <input name="newemail" type="text" class="form-control" id="emailBreach-input" placeholder="johndoe@gmail.com">
               </div>
               <button id="emailbutton" type="submit" class="btn btn-sm">Submit</button>
             </fieldset>
@@ -46,7 +60,7 @@
               <div id="new-website-breach" class="form-group">
                 <label for="websiteBreach-input">Check Website:</label>
                 <p><small>*Type name of website only</small></p>
-                <input name="newwebsite" type="text" class="form-control" id="websiteBreach-input">
+                <input name="newwebsite" type="text" class="form-control" id="websiteBreach-input" placeholder="Adobe">
               </div>
               <button id="websitebutton" type="submit" class="btn btn-sm" value="Reset form">Submit</button>
             </fieldset>
@@ -56,6 +70,7 @@
 
           <button id='tips' class='btn-sm'>Why? How?</button>
 
+
         </div>
 
       </div>
@@ -64,6 +79,8 @@
 
   </div>
 
+
+<!-- JAVASCRIPT ------->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

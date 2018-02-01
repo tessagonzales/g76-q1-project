@@ -6,6 +6,10 @@ $(document).ready(() => {
   let tipButton = $('#tips').hide()
   let fetchLink = $('#get-fetch')
 
+  let login = $('#login-form') //\\\\\\\\\\\\\\
+  let breachInfo = $('#breachInfo').hide() //\\\\\\\\
+  let loginButton = $('#submit') //\\\\\\\\\\\\\
+
   // start page
   enterForm.click((e) => {
     e.preventDefault()
@@ -14,7 +18,19 @@ $(document).ready(() => {
     tipButton.fadeIn(1000).show();
     $("#background").fadeTo("slow", .7);
 
+    login.fadeOut('slow').hide() //|||||||||||
+    breachInfo.show() //\\\\\\\\\\\\
+    loginButton.fadeOut('slow').hide() //\\\\\\\\\\\\\
+
   }) // END OF enterFrom EVENT
+
+
+
+
+
+
+
+
 
 
   // BUTTON & LINKS
@@ -111,6 +127,40 @@ $(document).ready(() => {
 
     ourWebsiteForm.reset()
   }) // end of addEventListener
+
+
+  // USERNAME/PASSWORD LOGIN
+  let userLoginForm = document.forms.userLoginForm
+  userLoginForm.onsubmit = function(e) {
+    e.preventDefault()
+    usernameInput = userLoginForm.newlogin.value
+    passwordInput = userLoginForm.newpassword.value
+
+    let username = document.getElementById('username')
+    let password = document.getElementById('password')
+
+    let allUserInput = {
+      username: username.value,
+      password: password.value
+    }
+
+    fetch('http://localhost:3001/login')
+      .then(response => response.json())
+      .then(users => {
+        //console.log(users)
+        let userInfo = users.filter(
+        user =>
+          user.username === allUserInput.username &&
+          user.password === allUserInput.password)
+
+          if (userInfo.length === 1) {
+        localStorage.setItem('user', JSON.stringify(userInfo[0]))
+        window.location = '/dash.html'
+      } else {
+        alert('Username "' + allUserInput.username + '" and/or password is not valid.')
+      }
+    }) // end of fetch
+  } // end of event listener
 
 
 }) //end of jQuery

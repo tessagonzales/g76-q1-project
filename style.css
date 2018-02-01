@@ -40,3 +40,14 @@ body {
 #emailBreach-input {
   width: 400px;
 }
+
+
+/*  -------------------- */
+#login-form {
+  float: right;
+  padding-top: 120px;
+  padding-left: 170px;
+  height: 650px;
+  width: 700px;
+  border-left: 1px solid grey;
+ }
