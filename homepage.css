@@ -85,6 +85,9 @@ a:hover {
 /* DASH PAGE */
 #your-emails {
   border: 1px solid white;
-  height: 200px;
+  border-radius: 25px;
+  height: auto;
   width: auto;
+  padding: 25px;
+  margin-bottom: 40px;
 }
