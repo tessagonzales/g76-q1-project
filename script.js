@@ -4,8 +4,8 @@ $(document).ready(() => {
   let frontpageLink = $('#front-page')
   let formList = $('#formList').hide()
   let tipButton = $('#tips').hide()
-  let fetchLink = $('#get-fetch')
-
+  let loginUser = $('#login-for-user')
+  console.log(loginUser)
   let login = $('#login-form') //\\\\\\\\\\\\\\
   let breachInfo = $('#breachInfo').hide() //\\\\\\\\
   let loginButton = $('#submit') //\\\\\\\\\\\\\
@@ -18,19 +18,8 @@ $(document).ready(() => {
     tipButton.fadeIn(1000).show();
     $("#background").fadeTo("slow", .7);
 
-    login.fadeOut('slow').hide() //|||||||||||
-    breachInfo.show() //\\\\\\\\\\\\
-    loginButton.fadeOut('slow').hide() //\\\\\\\\\\\\\
-
+    login.show()
   }) // END OF enterFrom EVENT
-
-
-
-
-
-
-
-
 
 
   // BUTTON & LINKS
@@ -42,40 +31,21 @@ $(document).ready(() => {
     location.replace('./homepage.html')
   })
 
+  loginUser.click(() => {
+    breachInfo.hide()
+    login.show()
+  })
+
 
   //////// DOM SORRY ////////////
-  // All BREACHES LIST
-  fetchLink.click(() => {
-    $('.col.one').hide()
-    $('.col.two').hide()
-    $('.col.three').hide()
-    $('.col.five').hide()
-
-    $('#fetch').append(`<p><a href= "homepage.html">&#8592; Back to Home Page</a></p><BR><BR>`)
-
-    fetch(`https://haveibeenpwned.com/api/v2/breaches`)
-      .then(response => response.json())
-      .then(breaches => {
-        //console.log('breaches: ', breaches)
-
-        for (let i = 0; i < breaches.length; i++) {
-          $('#fetch').append(
-            `<p>${breaches[i].Title}<BR>
-             Breach date: ${breaches[i].BreachDate}<br>
-             Description: ${breaches[i].Description}<BR><BR>
-             </p>`)
-        }
-
-      }) //end of fetch
-  }) //end of click
-
-
   // EMAIL BREACH
   let ourEmailForm = document.forms.emailBreach
   let newEmailBreach = document.getElementById('new-email-breach')
 
   ourEmailForm.emailbutton.addEventListener('click', function(e) {
     event.preventDefault()
+    login.hide()
+    breachInfo.show()
     let userInput = emailBreach.newemail.value
     console.log(userInput)
 
@@ -104,6 +74,8 @@ $(document).ready(() => {
 
   ourWebsiteForm.websitebutton.addEventListener('click', function(e) {
     event.preventDefault()
+    login.hide()
+    breachInfo.show()
     let userInput = websiteBreach.newwebsite.value
     userInput = userInput.replace(/\s/g, '')
     console.log(userInput);
@@ -120,11 +92,11 @@ $(document).ready(() => {
 
       }) // end of fetch()
 
+
     .catch ( (err) => {
         //console.log("err: ", err)
       document.getElementById('breachInfo').innerHTML = `<p style='text-align:center'>No results.</p>`
     })
-
     ourWebsiteForm.reset()
   }) // end of addEventListener
 
